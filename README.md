@@ -1,4 +1,4 @@
-# 🏛️ LLD Assignment Workspace: SST28-LLD101
+#  LLD Assignment Workspace: SST28-LLD101
 
 ![Java](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java)
 ![Course](https://img.shields.io/badge/Course-LLD--101-blue?style=for-the-badge)
