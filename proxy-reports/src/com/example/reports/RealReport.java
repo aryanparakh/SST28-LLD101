@@ -10,15 +10,34 @@ public class RealReport implements Report {
     private final String title;
     private final String classification;
 
+    private String content;
+
     public RealReport(String reportId, String title, String classification) {
         this.reportId = reportId;
         this.title = title;
         this.classification = classification;
+
+        loadFromDisk();
+    }
+     private void loadFromDisk() {
+        System.out.println("[disk] loading report " + reportId + " ...");
+        try {
+            Thread.sleep(120);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        content = "Internal report body for " + title;
     }
 
-    @Override
+      @Override
     public void display(User user) {
-        System.out.println("TODO: implement via real loading");
+        System.out.println("REPORT -> id=" + reportId
+                + " title=" + title
+                + " classification=" + classification
+                + " openedBy=" + user.getName());
+
+        System.out.println("CONTENT: " + content);
     }
 
     public String getClassification() {
